@@ -15,7 +15,7 @@
             <h1 class="app-title">CS Grade Tracker</h1>
           </div>
           <div class="user-section">
-            @if (isLoggedIn) {
+            @if (!isLoggedIn) {
               <div class="user-info">
                 <span>{{ currentUser?.name }}</span>
                 @if (currentUser?.profilePicture) {
@@ -34,7 +34,7 @@
       <!-- Main Content Area -->
       <main class="main-content">
         <!-- Side Navigation -->
-        @if (isLoggedIn) {
+        @if (!isLoggedIn) {
           <nav class="app-nav">
             <ul class="nav-list">
               <li>
